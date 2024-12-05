@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="180dp">
+
+    <ImageView
+        android:padding="5dp"
+        android:id="@+id/imageView"
+        android:importantForAccessibility="no"
+
+        android:layout_width="120dp"
+        android:layout_height="120dp" />
+
+    <TextView
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        tools:text="아이스 아메리카노"
+        android:id="@+id/nameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -16,9 +16,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1000dp" />
+            <include
+                android:id="@+id/recommendMenuList"
+                layout="@layout/layout_horizontal_menu_list" />
+
         </LinearLayout>
 
     </ScrollView>
@@ -42,6 +43,7 @@
                     android:id="@+id/appBarImageView"
                     android:layout_width="0dp"
                     android:layout_height="170dp"
+                    android:alpha="0.5"
                     android:background="@color/teal_200"
                     android:scaleType="centerCrop"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -62,6 +64,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ProgressBar
+                    android:id="@+id/appBarProgressBar"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="0dp"
                     android:layout_height="8dp"
@@ -81,7 +84,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="50dp"
-                    android:text="5/12★"
+                    android:text="@string/appbar_star_title"
                     android:textColor="@color/black"
                     android:textSize="28sp"
                     android:textStyle="bold"
@@ -115,10 +118,10 @@
                         android:textSize="20dp" />
 
                     <TextView
-                        android:layout_marginStart="20dp"
                         android:id="@+id/couponTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
                         android:drawableStart="@drawable/baseline_discount_24"
                         android:drawablePadding="5dp"
                         android:text="Coupon"
