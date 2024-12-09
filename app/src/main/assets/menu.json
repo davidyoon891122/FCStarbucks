@@ -1,0 +1,54 @@
+{
+  "coffee": [
+    {
+      "name": "아메리카노",
+      "image": "https://picsum.photos/100/100"
+    },
+    {
+      "name": "카페라떼",
+      "image": "https://picsum.photos/100/100"
+    },
+    {
+      "name": "아이스 아메리카노",
+      "image": "https://picsum.photos/100/100"
+    },
+    {
+      "name": "아이스 카페라떼",
+      "image": "https://picsum.photos/100/100"
+    },
+    {
+      "name": "자몽차",
+      "image": "https://picsum.photos/100/100"
+    },
+    {
+      "name": "토피넛 라떼",
+      "image": "https://picsum.photos/100/100"
+    },
+    {
+      "name": "콜드브루",
+      "image": "https://picsum.photos/100/100"
+    },
+    {
+      "name": "크림 소다",
+      "image": "https://picsum.photos/100/100"
+    }
+  ],
+  "food": [
+    {
+      "name": "카스테라",
+      "image": "https://picsum.photos/100/100"
+    },
+    {
+      "name": "블루베리 베이글",
+      "image": "https://picsum.photos/100/100"
+    },
+    {
+      "name": "샌드위치",
+      "image": "https://picsum.photos/100/100"
+    },
+    {
+      "name": "햄 치즈 샌드위치",
+      "image": "https://picsum.photos/100/100"
+    }
+  ]
+}
