@@ -26,17 +26,19 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         initBanner(homeData)
         initFoodMenu(menuData)
 
+        initFloatingActionButton()
+
+    }
+
+    private fun initFloatingActionButton() {
         binding.scrollView.setOnScrollChangeListener { view, _, scrollY, _, oldScrollY ->
             Log.e("ScrollView", "scrollY: $scrollY, oldScrollY: $oldScrollY")
-            if(scrollY == 0) {
+            if (scrollY == 0) {
                 binding.floatingActionButton.extend()
             } else {
                 binding.floatingActionButton.shrink()
             }
         }
-
-
-
     }
 
     private fun initFoodMenu(menuData: Menu) {

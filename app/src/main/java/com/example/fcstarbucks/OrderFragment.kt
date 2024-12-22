@@ -1,9 +1,12 @@
 package com.example.fcstarbucks
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fcstarbucks.databinding.FragmentOrderBinding
+import kotlin.math.abs
 
 class OrderFragment: Fragment(R.layout.fragment_order) {
 
@@ -13,6 +16,21 @@ class OrderFragment: Fragment(R.layout.fragment_order) {
         super.onViewCreated(view, savedInstanceState)
 
         binding = FragmentOrderBinding.bind(view)
+
+        val menuData = context?.readData("menu.json", Menu::class.java) ?: return
+        val menuAdapter = MenuAdapter().apply {
+            submitList(menuData.coffee)
+        }
+
+        binding.recyclerView.apply {
+            layoutManager = LinearLayoutManager(context)
+            adapter = menuAdapter
+        }
+
+        binding.appbarLayout.addOnOffsetChangedListener { appBarLayout, verticalOffset ->
+            val seekPosition = abs(verticalOffset) / appBarLayout.totalScrollRange.toFloat()
+            binding.motionLayout.progress = seekPosition
+        }
 
     }
 
